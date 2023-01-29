@@ -1,17 +1,28 @@
-#!/usr/bin/expect -f
+#!/bin/bash
+# A simple variable example
+greeting=Hello
+name=Tux
+var=$((3+9))
+echo $greeting $name $var
 
-set timeout -1
-spawn ../4/questions.sh
+if [ $a == $b -a $b == $c -a $a == $c ]
+then
+echo EQUILATERAL
 
-expect "Your name: "
-send -- "expect\n"
+elif [ $a == $b -o $b == $c -o $a == $c ]
+then 
+echo ISOSCELES
+else
+echo SCALENE
 
-expect "Are you human?\r
-y/n: "
-send -- "n\r"
+fi
 
-expect "What is your favorite programming language?\r
-Your answer: "
-send -- "Java\r"
+i=1
+while [[ $i -le 10 ]] ; do
+   echo "$i"
+  (( i += 1 ))
+done
 
-expect eof
+#Executing commands with back ticks(or ``)
+var=`df -h | grep tmpfs`
+echo $var
