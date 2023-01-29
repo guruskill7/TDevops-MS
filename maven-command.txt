@@ -1,0 +1,7 @@
+mvn clean  ----> is used to clean (removed the target folder and its content) and to
+                 download all the dependacies that will be need for the need project
+mvn compile ----> This will turn all the codes into an executable file
+mvn package -----> This then turn the executable into a specific file type (.jar, .war etc..)
+
+java -jar filenamehere ---> this will allow the application to be generated and ready to run
+ 
