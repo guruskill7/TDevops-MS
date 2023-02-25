@@ -1,0 +1,151 @@
+### sudo
+sudo useradd - To add a new user
+sudo passwd - Creating a password for the new user
+sudo groupadd - To add a new group
+sudo userdel - To delete the user
+sudo groupdel - To delete the  group
+sudo usermod -g - To add a user to a primary group
+
+### ls
+ls - By mentioning the path after ls, the content in that path will be shown
+ls –a - Using ‘a’ flag, indexes all the hidden contents in the particular directory
+ls –l - Using ‘l’ flag, indexes all the contents with its permissions, owner settings, and time
+stamp (long format)
+
+### sort 
+This command sorts the outcomes of a search either numerically or alphabetically. It also sorts file contents, files, and directories.
+Syntax:
+$ sort {filename}
+sort -f - the flag does case insensitive sorting 
+sort -r - the flag returns the results in reverse order
+sort -n - the flag returns the results as per numerical order
+
+### Grep
+This command searches for a particular string/ word in a text file. It is similar to “Ctrl+F” but operated through a CLI.
+Syntax:
+$ grep {filename}
+grep -n - Returns the matching strings along with their line number
+grep -i - Returns the results for case insensitive strings
+grep -c - Returns the number of lines in which the results matched the search string
+grep -v - Returns the result of lines not matching the search string
+
+### Tail
+It is corresponding to head command. The tail command prints the last N number of information of the given info. Of course, it prints the last 10 lines of the predefined documents. In the event that you provide more than one file name, at that point information from each document goes before by its record name. 
+Syntax:
+tail [OPTION]... [FILE]...
+tail -n 3 state.txt or tail -3 state.txt => -n for no. of lines
+tail +25 state.txt
+-c num: Prints the last ‘num’ bytes from the file specified.
+
+### Cat
+This command could read, alter or concatenate text files. It also shows file contents.
+Syntax:
+$ cat {filename}
+cat -n - It adds line numbers to all lines
+cat -b - It adds line numbers to non-blank lines
+cat -s - It squeezes blank lines into one line
+cat –E - It shows $ at the end of line
+
+### Chmod
+The command is utilized to alter the access authorizations of files and directories.
+Syntax:
+chmod {filename}
+4 – read permission
+2 – write permission
+1 – execute permission
+0 – no permission
+
+### Chown
+The chown command is utilized to alter the file Owner or group. 
+Syntax:
+chown [OPTION]… [OWNER][:[GROUP]] FILE…
+chown [OPTION]… –reference=RFILE FILE…
+Example: To change owner of the file:
+chown owner_name file_name
+chown master file1.txt
+Here, master is another user in the system. 
+
+### ld
+This command is utilized to discover client and group names and numeric IDs of the current 
+client or some other client in the server. 
+Syntax:
+id [OPTION]… [USER]
+Options:
+-g: Print only the effective group id.
+-G: Print all Group IDs.
+-r: Prints real ID instead of numbers.
+-n: Prints name instead of a number.
+-u: Prints only the effective user ID.
+–help: show help messages and exit.
+–version: show the version information and exit.
+
+### Ifconfig
+ifconfig (interface configuration) command is utilized to design the kernel occupant network interfaces. 
+Syntax:
+ifconfig [...OPTIONS] [INTERFACE]
+Syntax: ifconfig -a
+-a : It is used to show all the interfaces accessible, even if they are down.
+Syntax: ifconfig -s
+-s : Display a short list, instead of details.
+
+### Cut
+Cut command is utilized for separating a part of a file utilizing segments and delimiters. 
+If you need to list everything in a chosen section, utilize ‘- c’ with cut order. 
+For instance, let's select the initial two columns from our demo1.txt document. 
+cut -c1-2 demo1.txt
+
+### Sed
+Sed is a text manager which can execute editing activities in a non-intuitive manner. The sed command gets its contribution from standard input 
+or a document to play out the editing procedure on a record. It is an extremely ground-breaking utility and you could do a great deal of document controls utilizing sed. 
+In the event that you need to supplant a text in a file via looking through it in a document, you can utilize the sed command with a substitute ‘s’ to look for the particular pattern and alter it.
+To replace  “mikesh” in test.txt file to “Mukesh”, you can do as:
+sed 's/mikesh/mukesh/' test.txt
+
+### history
+history command is utilized to see the recently operated command. 
+These commands are stored in a set of history records. In Bash shell history command shows the entire list of the commands.
+Syntax:
+$ history : To display the limited number of commands which are executed prior as follows:
+$ history 10
+
+### find
+find command in UNIX is a command-line utility for strolling a file progressive system. 
+It upholds searching by file, envelope, name, creation date, alteration date, proprietor and consents. By utilizing the '- executive' other UNIX commands could be operated on files or folders found.
+Syntax :
+$ find [where to start searching from]
+[expression determines what to find] [-options] [what to find]
+Options :
+-ok CMD : It operates the same as -exec except the user is prompted first.
+-inum N : It searches for files with inode number ‘N’.
+-links N : It searches for files with ‘N’ links.
+-exec CMD: The file being searched that meets the given criteria and returns 0 for as its exit status for accurate command execution.
+
+### Diff
+diff command is utilized to discover the distinction between two files. It investigates the documents and prints the lines that are not comparative. 
+Let’s state that we have two documents, test and test1. Syntax –  diff test.txt test1.txt
+
+### Free
+In LINUX, there exists a command-line utility for this and that is free command that shows the aggregate sum of free space accessible alongside 
+the measure of memory utilized and trade memory in the framework, and furthermore the buffers utilized by the kernel. 
+Syntax:
+$free [OPTION]
+Options for free command
+-b, – -bytes :It shows the memory in bytes.
+-k, – -kilo :It shows the amount of memory in kilobytes(default).
+-m, – -mega :It shows the amount of memory in megabytes.
+-g, – -giga :It shows the amount of memory in gigabytes
+
+### telnet
+Telnet aids to connect to a remote Linux computer and execute programs remotely and operate administration.
+Syntax
+telnet hostname=”” or=””
+Example:
+telnet localhost
+
+### kill
+kill command in Linux, is an underlying command that is utilized to end processes physically. 
+kill -l :To show all the accessible signals you could utilize below command option:
+Syntax:$kill -l
+kill pid: To display how to utilize a PID using the kill command.
+Syntax: $kill pid
+
